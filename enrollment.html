@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment - Wazir Coding College</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="enrollment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@400;700;900&display=swap">
+</head>
+
+<body>
+    <header class="all-container">
+        <div class="head">
+            <div class="logo">
+                <img src="images/logo.png" alt="Wazir Coding College Logo">
+            </div>
+
+            <button class="menu-toggle">☰</button>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="enrollment.html">ENROLLMENT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn login-btn">Login</a>
+                    <a href="signup.html" class="btn signup-btn">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Enrollment Hero Section -->
+        <section class="enrollment-hero">
+            <div class="enrollment-hero-content">
+                <h2>Start Your Coding Journey Today!</h2>
+                <p>Join Wazir Coding College and transform your future with hands-on digital skills training</p>
+                <a href="#enrollment-form" class="cta-button">Enroll Now</a>
+            </div>
+        </section>
+
+        <!-- Enrollment Process Steps -->
+        <section class="all-section">
+            <h2>Simple Enrollment Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Fill Application</h3>
+                    <p>Complete the enrollment form with your details</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Course Selection</h3>
+                    <p>Choose your preferred course and schedule</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Payment</h3>
+                    <p>Secure your seat with easy payment options</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Get Started</h3>
+                    <p>Begin your learning journey with expert guidance</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enrollment Form -->
+        <section id="enrollment-form" class="all-section">
+            <h2>Enrollment Application</h2>
+            <p class="form-description">Please fill out the form below to enroll in your desired course. Our team will
+                contact you within 24 hours.</p>
+
+            <form class="enrollment-form" action="process.php" method="post">
+                <input type="hidden" name="form_type" value="enrollment">
+                <!-- Personal Information -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fatherName">Father's Name</label>
+                            <input type="text" id="fatherName" name="fatherName" placeholder="Enter father's name">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cnic">CNIC Number</label>
+                            <input type="text" id="cnic" name="cnic" placeholder="Enter your CNIC (optional)">
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dob">
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="address">Full Address *</label>
+                        <textarea id="address" name="address" placeholder="Enter your complete address" rows="3"
+                            required></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- Course Selection -->
+                <fieldset>
+                    <legend>Course Selection</legend>
+                    <div class="form-group">
+                        <label for="course">Select Course *</label>
+                        <select id="course" name="course" required>
+                            <option value="">-- Choose a Course --</option>
+                            <option value="python">Python Programming (3 Months) - Rs: 5,000</option>
+                            <option value="java">Java Programming (4 Months) - Rs: 6,500</option>
+                            <option value="frontend">Frontend Web Development (3 Months) - Rs: 4,500</option>
+                            <option value="fullstack">Full Stack Development (6 Months) - Rs: 12,000</option>
+                            <option value="photoshop">Adobe Photoshop Mastery (2 Months) - Rs: 3,500</option>
+                            <option value="canva">Canva Professional Design (1 Month) - Rs: 2,000</option>
+                            <option value="msoffice">MS Office Complete Package (2 Months) - Rs: 3,000</option>
+                            <option value="excel">Excel for Data Analysis (1.5 Months) - Rs: 2,500</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="schedule">Preferred Schedule</label>
+                            <select id="schedule" name="schedule">
+                                <option value="">-- Select Schedule --</option>
+                                <option value="morning">Morning (9 AM - 12 PM)</option>
+                                <option value="afternoon">Afternoon (2 PM - 5 PM)</option>
+                                <option value="evening">Evening (6 PM - 9 PM)</option>
+                                <option value="weekend">Weekend Classes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="startDate">Preferred Start Date</label>
+                            <input type="date" id="startDate" name="startDate">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Previous Experience</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="experience" value="beginner" checked>
+                                <span class="radio-checkmark"></span>
+                                Beginner (No prior experience)
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="experience" value="intermediate">
+                                <span class="radio-checkmark"></span>
+                                Intermediate (Some knowledge)
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="experience" value="advanced">
+                                <span class="radio-checkmark"></span>
+                                Advanced (Good understanding)
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Education Background -->
+                <fieldset>
+                    <legend>Education Background</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="education">Highest Education</label>
+                            <select id="education" name="education">
+                                <option value="">-- Select Education Level --</option>
+                                <option value="matric">Matriculation</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="bachelor">Bachelor's Degree</option>
+                                <option value="master">Master's Degree</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="institution">Institution Name</label>
+                            <input type="text" id="institution" name="institution"
+                                placeholder="School/College/University">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="background">Tell us about your background</label>
+                        <textarea id="background" name="background"
+                            placeholder="Briefly describe your educational and professional background"
+                            rows="3"></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- Payment Information -->
+                <fieldset>
+                    <legend>Payment Information</legend>
+                    <div class="payment-options">
+                        <h4>Payment Method</h4>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="payment" value="cash" checked>
+                                <span class="radio-checkmark"></span>
+                                Cash Payment (At College)
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="payment" value="bank">
+                                <span class="radio-checkmark"></span>
+                                Bank Transfer
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="payment" value="easypaisa">
+                                <span class="radio-checkmark"></span>
+                                EasyPaisa/JazzCash
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="installment" id="installment">
+                            <span class="checkbox-checkmark"></span>
+                            I'm interested in installment payment option
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Terms and Submit -->
+                <div class="form-footer">
+                    <div class="form-group terms">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="terms" id="terms" required>
+                            <span class="checkbox-checkmark"></span>
+                            I agree to the <a href="terms-conditions.html">Terms and Conditions</a> and <a
+                                href="privacy-policy.html">Privacy Policy</a> *
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="newsletter" id="newsletter" checked>
+                            <span class="checkbox-checkmark"></span>
+                            I would like to receive updates about new courses and promotions
+                        </label>
+                    </div>
+
+                    <div class="submit-section">
+                        <button type="submit" class="submit-btn">Submit Enrollment Application</button>
+                        <p class="form-note">Our admission team will contact you within 24 hours to confirm your
+                            enrollment and provide payment details.</p>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="all-section">
+            <h2>Need Help With Enrollment?</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4>📞 Call Us</h4>
+                    <p>+92 3025163084</p>
+                    <p>Available 9 AM - 7 PM</p>
+                </div>
+                <div class="contact-item">
+                    <h4>📧 Email Us</h4>
+                    <p>nizamwazir6560@gmail.com</p>
+                    <p>We respond within 2 hours</p>
+                </div>
+                <div class="contact-item">
+                    <h4>📍 Visit Us</h4>
+                    <p>Wana South Waziristan</p>
+                    <p>Get directions to our College</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="all-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What documents do I need for enrollment?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You'll need a copy of your CNIC and recent photographs. For specific courses, educational
+                            certificates might be required.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can I pay in installments?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer flexible installment plans for most courses. Please indicate your interest in
+                            the enrollment form and our team will contact you with details.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What if I miss a class?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide recorded sessions and one-on-one support to help you catch up on missed classes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you provide certificates?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, upon successful completion of any course, you'll receive a recognized certificate from
+                            Wazir Coding College.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foot">
+            <div class="quicklinks">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="enrollment.html">ENROLLMENT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="sign up">SIGN UP</a></li>
+                </ul>
+            </div>
+            <div class="address">
+                <h4>Address:</h4>
+                <p> 📍 Wana south Waziristan </p>
+                <h4>Email:</h4>
+                <p>nizamwazir6560@gmail.com</p>
+                <h4>Contact No:</h4>
+                <p>+92 3025163084</p>
+            </div>
+            <div class="footer-icons">
+                <h4>Follow us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/NizamUdDinWazirK/" target="_blank"><img src="images/facebook.png"
+                            alt="Facebook"></a>
+                    <a href="https://www.youtube.com/@wazircoding786" target="_blank"><img src="images/youtube.png"
+                            alt="YouTube"></a>
+                    <a href="https://www.instagram.com/nizamuddinwazirkk/" target="_blank"><img
+                            src="images/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>&copy; 2025 Wazir Coding College || All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="enrollment.js"></script>
+
+</body>
+
+</html>

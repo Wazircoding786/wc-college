@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Wazir Coding College</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="courses.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@400;700;900&display=swap">
+</head>
+
+<body>
+    <header class="all-container">
+        <div class="head">
+            <div class="logo">
+                <img src="images/logo.png" alt="Wazir Coding College Logo">
+            </div>
+
+            <button class="menu-toggle">☰</button>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="enrollment.html">ENROLLMENT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn login-btn">Login</a>
+                    <a href="signup.html" class="btn signup-btn">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="all-section">
+            <div class="courses-hero-content">
+                <h2>Our Courses & Programs</h2>
+                <p>Choose from our comprehensive range of digital skills courses designed for beginners and
+                    professionals alike. Start your journey to becoming tech-savvy today!</p>
+                <div class="courses-hero-content-link">
+                    <a href="#course-categories" class="cta-button">Explore Courses</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Categories -->
+        <section id="course-categories" class="all-section">
+            <h2>Course Categories</h2>
+            <div class="category-filters">
+                <button class="filter-btn active" data-filter="all">All Courses</button>
+                <button class="filter-btn" data-filter="programming">Programming</button>
+                <button class="filter-btn" data-filter="web-dev">Web Development</button>
+                <button class="filter-btn" data-filter="design">Graphic Design</button>
+                <button class="filter-btn" data-filter="office">MS Office</button>
+            </div>
+
+            <!-- Programming Courses -->
+            <div class="course-category" data-category="programming">
+                <h3 id="programming">Programming & Software Development</h3>
+                <div class="allcard">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/python2.jpg"
+                                alt="Python Programming">
+                        </div>
+                        <div class="course-content">
+                            <h4>Python Programming</h4>
+                            <p class="course-duration">Duration: 3 Months</p>
+                            <p class="course-level">Level: Beginner to Advanced</p>
+                            <p>Learn Python from basics to advanced concepts including data structures, OOP, and
+                                real-world projects.</p>
+                            <ul class="course-topics">
+                                <li>Python Syntax & Basics</li>
+                                <li>Data Structures & Algorithms</li>
+                                <li>Object-Oriented Programming</li>
+                                <li>File Handling & Modules</li>
+                                <li>Project Development</li>
+                            </ul>
+                            <div class="course-footer">
+                                <span class="course-price">Rs: 5,000</span>
+                                <a href="enrollment.html" class="enroll-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/java2.jpeg"
+                                alt="Java Programming">
+                        </div>
+                        <div class="course-content">
+                            <h4>Java Programming</h4>
+                            <p class="course-duration">Duration: 4 Months</p>
+                            <p class="course-level">Level: Intermediate</p>
+                            <p>Master Java programming for desktop and web applications with comprehensive hands-on
+                                training.</p>
+                            <ul class="course-topics">
+                                <li>Java Fundamentals</li>
+                                <li>OOP Concepts</li>
+                                <li>Exception Handling</li>
+                                <li>Java Collections</li>
+                                <li>Desktop Applications</li>
+                            </ul>
+                            <div class="course-footer">
+                                <span class="course-price">Rs: 6,500</span>
+                                <a href="enrollment.html" class="enroll-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Development Courses -->
+            <div class="course-category" data-category="web-dev">
+                <h3 id="web">Web Development</h3>
+                <div class="allcard">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/web-dev2.jpeg"
+                                alt="Frontend Development">
+                        </div>
+                        <div class="course-content">
+                            <h4>Frontend Web Development</h4>
+                            <p class="course-duration">Duration: 3 Months</p>
+                            <p class="course-level">Level: Beginner</p>
+                            <p>Learn to create beautiful, responsive websites using HTML5, CSS3, and JavaScript.</p>
+                            <ul class="course-topics">
+                                <li>HTML5 & Semantic HTML</li>
+                                <li>CSS3 & Flexbox/Grid</li>
+                                <li>JavaScript Fundamentals</li>
+                                <li>Responsive Design</li>
+                                <li>Bootstrap Framework</li>
+                            </ul>
+                            <div class="course-footer">
+                                <span class="course-price">Rs: 4,500</span>
+                                <a href="enrollment.html" class="enroll-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/full-stack.jpeg"
+                                alt="Full Stack Development">
+                        </div>
+                        <div class="course-content">
+                            <h4>Full Stack Development</h4>
+                            <p class="course-duration">Duration: 6 Months</p>
+                            <p class="course-level">Level: Advanced</p>
+                            <p>Become a full-stack developer with MERN stack (MongoDB, Express, React, Node.js).</p>
+                            <ul class="course-topics">
+                                <li>React.js & Redux</li>
+                                <li>Node.js & Express</li>
+                                <li>MongoDB Database</li>
+                                <li>RESTful APIs</li>
+                                <li>Deployment & DevOps</li>
+                            </ul>
+                            <div class="course-footer">
+                                <span class="course-price">Rs: 12,000</span>
+                                <a href="enrollment.html" class="enroll-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Graphic Design Courses -->
+            <div class="course-category" data-category="design">
+                <h3 id="graphic-design">Graphic Design</h3>
+                <div class="allcard">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/photoshop.jpg"
+                                alt="Adobe Photoshop">
+                        </div>
+                        <div class="course-content">
+                            <h4>Adobe Photoshop Mastery</h4>
+                            <p class="course-duration">Duration: 2 Months</p>
+                            <p class="course-level">Level: Beginner to Pro</p>
+                            <p>Master professional photo editing, digital painting, and graphic design with Adobe
+                                Photoshop.</p>
+                            <ul class="course-topics">
+                                <li>Interface & Tools</li>
+                                <li>Layers & Masking</li>
+                                <li>Photo Manipulation</li>
+                                <li>Digital Painting</li>
+                                <li>Professional Projects</li>
+                            </ul>
+                            <div class="course-footer">
+                                <span class="course-price">Rs: 3,500</span>
+                                <a href="enrollment.html" class="enroll-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/canwa.webp"
+                                alt="Canva Design">
+                        </div>
+                        <div class="course-content">
+                            <h4>Canva Professional Design</h4>
+                            <p class="course-duration">Duration: 1 Month</p>
+                            <p class="course-level">Level: Beginner</p>
+                            <p>Create stunning designs for social media, presentations, and marketing materials with
+                                Canva.</p>
+                            <ul class="course-topics">
+                                <li>Canva Interface</li>
+                                <li>Design Principles</li>
+                                <li>Brand Kit Creation</li>
+                                <li>Social Media Graphics</li>
+                                <li>Presentation Design</li>
+                            </ul>
+                            <div class="course-footer">
+                                <span class="course-price">Rs: 2,000</span>
+                                <a href="enrollment.html" class="enroll-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MS Office Courses -->
+            <div class="course-category" data-category="office">
+                <h3 id="ms-office">MS Office & Productivity</h3>
+                <div class="allcard">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/Office Tools_.jpeg"
+                                alt="MS Office Complete">
+                        </div>
+                        <div class="course-content">
+                            <h4>MS Office Complete Package</h4>
+                            <p class="course-duration">Duration: 2 Months</p>
+                            <p class="course-level">Level: All Levels</p>
+                            <p>Master Microsoft Word, Excel, PowerPoint, and Outlook for academic and professional
+                                success.</p>
+                            <ul class="course-topics">
+                                <li>MS Word - Documents</li>
+                                <li>MS Excel - Spreadsheets</li>
+                                <li>MS PowerPoint - Presentations</li>
+                                <li>MS Outlook - Email Management</li>
+                                <li>Advanced Tips & Tricks</li>
+                            </ul>
+                            <div class="course-footer">
+                                <span class="course-price">Rs: 3,000</span>
+                                <a href="enrollment.html" class="enroll-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/Excel.jpeg"
+                                alt="Excel Advanced">
+                        </div>
+                        <div class="course-content">
+                            <h4>Excel for Data Analysis</h4>
+                            <p class="course-duration">Duration: 1.5 Months</p>
+                            <p class="course-level">Level: Intermediate</p>
+                            <p>Advanced Excel functions, data analysis, pivot tables, and automation for business
+                                intelligence.</p>
+                            <ul class="course-topics">
+                                <li>Advanced Formulas</li>
+                                <li>Pivot Tables & Charts</li>
+                                <li>Data Analysis Tools</li>
+                                <li>Macros & Automation</li>
+                                <li>Business Dashboards</li>
+                            </ul>
+                            <div class="course-footer">
+                                <span class="course-price">Rs: 2,500</span>
+                                <a href="enrollment.html" class="enroll-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Benefits -->
+        <section class="all-section">
+            <h2>What You'll Gain</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h4>🎯 Practical Skills</h4>
+                    <p>Hands-on projects that build real-world experience</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>📚 Comprehensive Materials</h4>
+                    <p>Detailed notes, video tutorials, and reference guides</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>👨‍🏫 Expert Guidance</h4>
+                    <p>Personalized feedback from experienced instructors</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>📜 Completion Certificate</h4>
+                    <p>Recognized certification for your portfolio</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>💼 Career Support</h4>
+                    <p>Guidance for freelancing and job opportunities</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>🕐 Flexible Schedule</h4>
+                    <p>Learn at your own pace with lifetime access</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="all-section cta-section">
+            <h2>Ready to Start Your Learning Journey?</h2>
+            <p>Join hundreds of students who have transformed their skills with Wazir Coding College</p>
+            <div class="cta-buttons">
+                <a href="enrollment.html" class="cta-button primary">Enroll Now</a>
+                <a href="contact.html" class="cta-button secondary">Contact for Info</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foot">
+            <div class="quicklinks">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="enrollment.html">ENROLLMENT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="sign up">SIGN UP</a></li>
+                </ul>
+            </div>
+            <div class="address">
+                <h4>Address:</h4>
+                <p> 📍 Wana south Waziristan </p>
+                <h4>Email:</h4>
+                <p>nizamwazir6560@gmail.com</p>
+                <h4>Contact No:</h4>
+                <p>+92 3025163084</p>
+            </div>
+            <div class="footer-icons">
+                <h4>Follow us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/NizamUdDinWazirK/" target="_blank"><img src="images/facebook.png"
+                            alt="Facebook"></a>
+                    <a href="https://www.youtube.com/@wazircoding786" target="_blank"><img src="images/youtube.png"
+                            alt="YouTube"></a>
+                    <a href="https://www.instagram.com/nizamuddinwazirkk/" target="_blank"><img
+                            src="images/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>&copy; 2025 Wazir Coding College || All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="courses.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

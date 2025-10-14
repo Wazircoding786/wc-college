@@ -1,0 +1,268 @@
+/* --- HEADER (Used on all pages) --- */
+.all-container {
+    background: var(--primary-color);
+    padding: 1rem 5%;
+    color: var(--light-text);
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--light-text);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* --- ABOUT PAGE: MISSION & VISION --- */
+.mission-vision-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    text-align: center;
+}
+
+.mission-vision-item h4 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+
+/* --- ABOUT PAGE: DIRECTOR SECTION --- */
+.ourDirector {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.director-text {
+    flex: 1.5; /* More space for text */
+}
+
+.director-image {
+    flex: 1;
+    text-align: center;
+}
+
+.director-image img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 5%;
+    border: 4px solid var(--accent-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* --- ABOUT PAGE: MENTORS SECTION --- */
+.mentors {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem; /* Space between each mentor */
+}
+
+.ourmentor {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.ourmentor:nth-child(even) {
+    flex-direction: row-reverse; /* Zigzag layout */
+}
+
+.mentor-text {
+    flex: 1;
+}
+
+.mentor-text h4 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.mentor-image {
+    flex-basis: 300px; /* Fixed width for image container */
+}
+
+.mentor-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* --- ABOUT PAGE: FINAL CTA --- */
+.about-last-button {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.about-last-button h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- FOOTER (Used on all pages) --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 4rem 5% 2rem;
+}
+
+.foot {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 2rem;
+}
+
+.foot h4 {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.quicklinks ul,
+.address {
+    list-style: none;
+}
+
+.quicklinks li {
+    margin-bottom: 0.5rem;
+}
+
+.quicklinks a {
+    text-decoration: none;
+    color: var(--light-text);
+    transition: color 0.3s ease;
+}
+
+.quicklinks a:hover {
+    color: var(--accent-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover img {
+    opacity: 0.8;
+}
+
+.copy {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .mission-vision-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .ourDirector {
+        flex-direction: column;
+    }
+
+    .ourmentor, .ourmentor:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .foot {
+        text-align: center;
+        justify-items: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+/* ==================================================================== */
+/* About Page Specific Animations ===================================== */
+/* ==================================================================== */
+.ourmentor {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.mission-vision-item {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-vision-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.director-image img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Enhanced CTA button */
+.about-last-button .cta-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-last-button .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.about-last-button .cta-button:hover::before {
+    left: 100%;
+}

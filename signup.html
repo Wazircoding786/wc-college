@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Wazir Coding College</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@400;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="all-container">
+        <div class="head">
+            <div class="logo">
+                <img src="images/logo.png" alt="Wazir Coding College Logo">
+            </div>
+
+            <button class="menu-toggle">☰</button>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="enrollment.html">ENROLLMENT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn login-btn">Login</a>
+                    <a href="signup.html" class="btn signup-btn active">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="signup-main">
+        <!-- Sign Up Hero Section -->
+        <section class="signup-hero">
+            <div class="signup-hero-content">
+                <h2>Start Your Coding Journey!</h2>
+                <p>Join Wazir Coding College and unlock your potential in the digital world</p>
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-rocket"></i>
+                        <span>Launch Your Career</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-handshake"></i>
+                        <span>Join Our Community</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-award"></i>
+                        <span>Get Certified</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sign Up Form Section -->
+        <section class="signup-section">
+            <div class="signup-container">
+                <div class="signup-card">
+                    <div class="signup-header">
+                        <h2>Create Student Account</h2>
+                        <p>Join thousands of students learning with Wazir Coding College</p>
+                    </div>
+
+                    <!-- Progress Steps -->
+                    <div class="progress-steps">
+                        <div class="step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <span>Personal Info</span>
+                        </div>
+                        <div class="step" data-step="2">
+                            <div class="step-number">2</div>
+                            <span>Account Details</span>
+                        </div>
+                        <div class="step" data-step="3">
+                            <div class="step-number">3</div>
+                            <span>Course Interest</span>
+                        </div>
+                    </div>
+
+                    <form class="signup-form" id="signupForm" action="process.php" method="post">
+                        <input type="hidden" name="form_type" value="signup">
+                        <!-- Step 1: Personal Information -->
+                        <div class="form-step active" data-step="1">
+                            <h3>Personal Information</h3>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <div class="input-group">
+                                        <i class="fas fa-user"></i>
+                                        <input type="text" id="firstName" name="firstName"
+                                            placeholder="Enter your first name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <div class="input-group">
+                                        <i class="fas fa-user"></i>
+                                        <input type="text" id="lastName" name="lastName"
+                                            placeholder="Enter your last name" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <div class="input-group">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email address"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <div class="input-group">
+                                        <i class="fas fa-phone"></i>
+                                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dob">Date of Birth</label>
+                                    <div class="input-group">
+                                        <i class="fas fa-calendar"></i>
+                                        <input type="date" id="dob" name="dob">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <div class="input-group">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <input type="text" id="address" name="address" placeholder="Enter your address">
+                                </div>
+                            </div>
+
+                            <div class="step-actions">
+                                <button type="button" class="next-btn" data-next="2">Next Step</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Account Details -->
+                        <div class="form-step" data-step="2">
+                            <h3>Account Details</h3>
+
+                            <div class="form-group">
+                                <label for="username">Username *</label>
+                                <div class="input-group">
+                                    <i class="fas fa-at"></i>
+                                    <input type="text" id="username" name="username" placeholder="Choose a username"
+                                        required>
+                                    <div class="username-availability"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="password">Password *</label>
+                                    <div class="input-group">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="password" id="password" name="password"
+                                            placeholder="Create a password" required>
+                                        <button type="button" class="password-toggle">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                    <div class="password-strength">
+                                        <div class="strength-bar">
+                                            <div class="strength-fill"></div>
+                                        </div>
+                                        <span class="strength-text">Password strength</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirm Password *</label>
+                                    <div class="input-group">
+                                        <i class="fas fa-lock"></i>
+                                        <input type="password" id="confirmPassword" name="confirmPassword"
+                                            placeholder="Confirm your password" required>
+                                        <button type="button" class="password-toggle">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                    <div class="password-match"></div>
+                                </div>
+                            </div>
+
+                            <div class="step-actions">
+                                <button type="button" class="prev-btn" data-prev="1">Previous</button>
+                                <button type="button" class="next-btn" data-next="3">Next Step</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Course Interest -->
+                        <div class="form-step" data-step="3">
+                            <h3>Course Interest & Preferences</h3>
+
+                            <div class="form-group">
+                                <label for="courseInterest">Which course interests you? *</label>
+                                <select id="courseInterest" name="courseInterest" required>
+                                    <option value="">-- Select a Course --</option>
+                                    <option value="python">Python Programming</option>
+                                    <option value="java">Java Programming</option>
+                                    <option value="frontend">Frontend Web Development</option>
+                                    <option value="fullstack">Full Stack Development</option>
+                                    <option value="photoshop">Adobe Photoshop</option>
+                                    <option value="canva">Canva Design</option>
+                                    <option value="msoffice">MS Office</option>
+                                    <option value="excel">Excel Data Analysis</option>
+                                    <option value="notsure">Not Sure Yet</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Experience Level</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="experience" value="beginner" checked>
+                                        <span class="radio-checkmark"></span>
+                                        Beginner (No prior experience)
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="experience" value="intermediate">
+                                        <span class="radio-checkmark"></span>
+                                        Intermediate (Some knowledge)
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="experience" value="advanced">
+                                        <span class="radio-checkmark"></span>
+                                        Advanced (Good understanding)
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Learning Goals</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="goals" value="career">
+                                        <span class="checkbox-checkmark"></span>
+                                        Career Development
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="goals" value="freelance">
+                                        <span class="checkbox-checkmark"></span>
+                                        Freelancing
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="goals" value="personal">
+                                        <span class="checkbox-checkmark"></span>
+                                        Personal Interest
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="goals" value="academic">
+                                        <span class="checkbox-checkmark"></span>
+                                        Academic Requirements
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="referral">How did you hear about us?</label>
+                                <select id="referral" name="referral">
+                                    <option value="">-- Select Option --</option>
+                                    <option value="friend">Friend/Family</option>
+                                    <option value="social">Social Media</option>
+                                    <option value="google">Google Search</option>
+                                    <option value="website">Our Website</option>
+                                    <option value="advertisement">Advertisement</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group terms-group">
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="terms" id="terms" required>
+                                    <span class="checkbox-checkmark"></span>
+                                    I agree to the <a href="terms.html" target="_blank">Terms and Conditions</a> and <a
+                                        href="privacy.html" target="_blank">Privacy Policy</a> *
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="newsletter" id="newsletter" checked>
+                                    <span class="checkbox-checkmark"></span>
+                                    I want to receive updates about new courses and promotions
+                                </label>
+                            </div>
+
+                            <div class="step-actions">
+                                <button type="button" class="prev-btn" data-prev="2">Previous</button>
+                                <button type="submit" class="submit-btn">
+                                    <span class="btn-text">Create Account</span>
+                                    <div class="btn-loader" style="display: none;">
+                                        <div class="spinner"></div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="signup-footer">
+                        <p>Already have an account? <a href="login.html">Sign in here</a></p>
+                    </div>
+                </div>
+
+                <div class="signup-benefits">
+                    <div class="benefits-card">
+                        <h3>Why Join Wazir Coding College?</h3>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Career Growth</h4>
+                                <p>Learn skills that are in high demand in today's job market</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Expert Instructors</h4>
+                                <p>Learn from experienced professionals and industry experts</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Affordable Education</h4>
+                                <p>Quality education at prices that won't break the bank</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Recognized Certification</h4>
+                                <p>Get certified and boost your career prospects</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Job Support</h4>
+                                <p>Get guidance for job interviews and career placement</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <h3>Join Our Growing Community</h3>
+                        <div class="stats-grid">
+                            <div class="stat">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Students Trained</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">95%</div>
+                                <div class="stat-label">Success Rate</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Student Support</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section class="stories-section">
+            <div class="all-section">
+                <h2>Success Stories From Our Students</h2>
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <div class="story-content">
+                            <div class="student-avatar">
+                                <img src="images/student(7).jpeg" alt="student">
+                            </div>
+                            <p>"Wazir Coding College transformed my career. From zero coding knowledge to a full-time
+                                web developer in 6 months!"</p>
+                            <div class="student-info">
+                                <h4>Ali Ahmed</h4>
+                                <span>Web Developer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="story-content">
+                            <div class="student-avatar">
+                                <img src="images/girls.jpeg" alt="student">
+                            </div>
+                            <p>"The practical approach to learning made all the difference. I started freelancing while
+                                still studying!"</p>
+                            <div class="student-info">
+                                <h4>Sara Khan</h4>
+                                <span>Graphic Designer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="story-content">
+                            <div class="student-avatar">
+                                <img src="images/student(6).jpeg" alt="student">
+                            </div>
+                            <p>"Amazing instructors and supportive community. I doubled my salary after completing the
+                                Python course."</p>
+                            <div class="student-info">
+                                <h4>Bilal Hassan</h4>
+                                <span>Python Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="all-section">
+                <div class="cta-content">
+                    <h2>Ready to Transform Your Future?</h2>
+                    <p>Join Wazir Coding College today and take the first step towards a successful career in technology
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="courses.html" class="cta-button primary">Explore Courses</a>
+                        <a href="contact.html" class="cta-button secondary">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foot">
+            <div class="quicklinks">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="enrollment.html">ENROLLMENT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="login.html">LOG IN</a></li>
+                    <li><a href="signup.html">SIGN UP</a></li>
+                </ul>
+            </div>
+            <div class="address">
+                <h4>Address:</h4>
+                <p> 📍 Wana south Waziristan </p>
+                <h4>Email:</h4>
+                <p>nizamwazir6560@gmail.com</p>
+                <h4>Contact No:</h4>
+                <p>+92 3025163084</p>
+            </div>
+            <div class="footer-icons">
+                <h4>Follow us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/NizamUdDinWazirK/" target="_blank"><img src="images/facebook.png"
+                            alt="Facebook"></a>
+                    <a href="https://www.youtube.com/@wazircoding786" target="_blank"><img src="images/youtube.png"
+                            alt="YouTube"></a>
+                    <a href="https://www.instagram.com/nizamuddinwazirkk/" target="_blank"><img
+                            src="images/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>&copy; 2025 Wazir Coding College || All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="signup.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

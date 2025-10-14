@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wazir Coding College</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@400;700;900&display=swap">
+</head>
+
+<body>
+    <header class="all-container">
+        <div class="head">
+            <div class="logo">
+                <img src="images/logo.png" alt="Wazir Coding College Logo">
+            </div>
+
+            <button class="menu-toggle">☰</button>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="enrollment.html">ENROLLMENT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn login-btn">Login</a>
+                    <a href="signup.html" class="btn signup-btn">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contact Hero Section -->
+        <section class="contact-hero">
+            <div class="contact-hero-content">
+                <h2>Get In Touch With Us</h2>
+                <p>We're here to help you start your coding journey. Reach out with any questions!</p>
+                <div class="contact-stats">
+                    <div class="stat">
+                        <h3>24h</h3>
+                        <p>Response Time</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Student Support</p>
+                    </div>
+                    <div class="stat">
+                        <h3>500+</h3>
+                        <p>Students Helped</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Methods -->
+        <section class="all-section">
+            <h2>Multiple Ways to Reach Us</h2>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="method-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p>+92 3025163084</p>
+                    <p class="method-desc">Available 9 AM - 7 PM, 7 days a week</p>
+                    <a href="tel:+923025163084" class="method-btn">Call Now</a>
+                </div>
+
+                <div class="contact-method">
+                    <div class="method-icon">📧</div>
+                    <h3>Email Us</h3>
+                    <p>nizamwazir6560@gmail.com</p>
+                    <p class="method-desc">We respond within 2 hours during business hours</p>
+                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" class="method-btn">Send Email</a>
+                </div>
+
+                <div class="contact-method">
+                    <div class="method-icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p>+92 3025163084</p>
+                    <p class="method-desc">Quick responses for urgent inquiries</p>
+                    <a href="https://wa.me/923025163084" class="method-btn" target="_blank">Message on WhatsApp</a>
+                </div>
+
+                <div class="contact-method">
+                    <div class="method-icon">📍</div>
+                    <h3>Visit Us</h3>
+                    <p>Wana South Waziristan</p>
+                    <p class="method-desc">Come see our College and meet our team</p>
+                    <a href="#location" class="method-btn">Get Directions</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form & Info -->
+        <section class="all-section contact-main">
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2>Send Us a Message</h2>
+                    <p class="form-description">Have questions about our courses? Want to schedule a visit? Fill out the
+                        form below and we'll get back to you ASAP.</p>
+
+                    <form class="contact-form" action="process.php" method="post">
+                        <input type="hidden" name="form_type" value="contact_page">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Full Name *</label>
+                                <input type="text" id="contactName" name="contactName"
+                                    placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address *</label>
+                                <input type="email" id="contactEmail" name="contactEmail" placeholder="Enter your email"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactPhone">Phone Number</label>
+                                <input type="tel" id="contactPhone" name="contactPhone"
+                                    placeholder="Enter your phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject">Subject *</label>
+                                <select id="contactSubject" name="contactSubject" required>
+                                    <option value="">-- Select Subject --</option>
+                                    <option value="course-info">Course Information</option>
+                                    <option value="enrollment">Enrollment Query</option>
+                                    <option value="fee-structure">Fee Structure</option>
+                                    <option value="schedule">Class Schedule</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="contactMessage"
+                                placeholder="Please describe your inquiry in detail..." rows="6" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="newsletter" id="contactNewsletter" checked>
+                                <span class="checkbox-checkmark"></span>
+                                I would like to receive updates about new courses and promotions
+                            </label>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-sidebar">
+                    <div class="info-card">
+                        <h3>Contact Information</h3>
+
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div class="info-content">
+                                <h4>Our Location</h4>
+                                <p>Wana South Waziristan</p>
+                                <small>Visit us at our College campus</small>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">📞</div>
+                            <div class="info-content">
+                                <h4>Phone Numbers</h4>
+                                <p>+92 3025163084</p>
+                                <small>Primary contact number</small>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">📧</div>
+                            <div class="info-content">
+                                <h4>Email Address</h4>
+                                <p>nizamwazir6560@gmail.com</p>
+                                <small>Send us detailed inquiries</small>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">🕒</div>
+                            <div class="info-content">
+                                <h4>Business Hours</h4>
+                                <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                                <p>Sunday: 10:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-card">
+                        <h3>Follow Us</h3>
+                        <p>Stay updated with our latest courses and student success stories</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/NizamUdDinWazirK/" target="_blank"
+                                class="social-link facebook">
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://www.youtube.com/@wazircoding786" target="_blank"
+                                class="social-link youtube">
+                                <span>YouTube</span>
+                            </a>
+                            <a href="https://www.instagram.com/nizamuddinwazirkk/" target="_blank"
+                                class="social-link instagram">
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Map -->
+        <section id="location" class="all-section">
+            <h2>Find Our Location</h2>
+            <div class="location-container">
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <h3>Wazir Coding College</h3>
+                        <p>📍 Wana South Waziristan</p>
+                        <p>We're located in the heart of Wana, easily accessible from all parts of the city.</p>
+                        <div class="location-details">
+                            <h4>How to Reach Us:</h4>
+                            <ul>
+                                <li>Located near Central Bazaar</li>
+                                <li>5-minute walk from Main Bus Stand</li>
+                                <li>Ample parking space available</li>
+                                <li>Wheelchair accessible entrance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location-info">
+                    <h3>Visit Our College</h3>
+                    <p>Come see our modern facilities, meet our instructors, and get a feel for our learning
+                        environment.</p>
+
+                    <div class="visit-details">
+                        <div class="detail-item">
+                            <h4>🏫 Campus Tour</h4>
+                            <p>Schedule a campus tour to see our labs and classrooms</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>👨‍🏫 Meet Instructors</h4>
+                            <p>Talk directly with our expert instructors</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>💻 Demo Class</h4>
+                            <p>Attend a free demo class to experience our teaching style</p>
+                        </div>
+                    </div>
+
+                    <a href="enrollment.html" class="cta-button">Schedule a Visit</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="all-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What's the best way to contact for course information?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For quick course information, calling us directly or messaging on WhatsApp is fastest. For
+                            detailed syllabus and curriculum, email is preferred.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you offer online classes?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer both in-person and online classes for most courses. Contact us to learn about
+                            our online learning options and requirements.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can I visit the College before enrolling?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We encourage prospective students to visit our campus, meet our instructors, and
+                            see our facilities. You can even attend a demo class.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What payment methods do you accept?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept cash, bank transfers, and mobile payments (EasyPaisa/JazzCash). Installment plans
+                            are also available for most courses.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you provide certificates after course completion?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all students receive a recognized certificate upon successful completion of their
+                            course, which can help with job applications and career advancement.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-cta">
+                <p>Still have questions? <a href="#contact-form">Send us a message</a> or call us directly at
+                    <strong>+92 3025163084</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- Quick Contact CTA -->
+        <section class="all-section quick-contact-cta">
+            <div class="cta-content">
+                <h2>Ready to Start Your Coding Journey?</h2>
+                <p>Don't wait - get in touch with us today and take the first step toward your future in technology!</p>
+                <div class="cta-buttons">
+                    <a href="tel:+923025163084" class="cta-button primary">Call Now</a>
+                    <a href="enrollment.html" class="cta-button secondary">Enroll Today</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foot">
+            <div class="quicklinks">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="enrollment.html">ENROLLMENT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </div>
+            <div class="address">
+                <h4>Address:</h4>
+                <p> 📍 Wana south Waziristan </p>
+                <h4>Email:</h4>
+                <p>nizamwazir6560@gmail.com</p>
+                <h4>Contact No:</h4>
+                <p>+92 3025163084</p>
+            </div>
+            <div class="footer-icons">
+                <h4>Follow us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/NizamUdDinWazirK/" target="_blank"><img src="images/facebook.png"
+                            alt="Facebook"></a>
+                    <a href="https://www.youtube.com/@wazircoding786" target="_blank"><img src="images/youtube.png"
+                            alt="YouTube"></a>
+                    <a href="https://www.instagram.com/nizamuddinwazirkk/" target="_blank"><img
+                            src="images/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>&copy; 2025 Wazir Coding College || All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="contact.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

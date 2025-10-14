@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Wazir Coding College</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@400;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="all-container">
+        <div class="head">
+            <div class="logo">
+                <img src="images/logo.png" alt="Wazir Coding College Logo">
+            </div>
+            <button class="menu-toggle">☰</button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="enrollment.html">ENROLLMENT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn login-btn active">Login</a>
+                    <a href="signup.html" class="btn signup-btn">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="login-main">
+        <!-- Login Hero Section -->
+        <section class="login-hero">
+            <div class="login-hero-content">
+                <h2>Welcome Back!</h2>
+                <p>Continue your coding journey with Wazir Coding College</p>
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-book-open"></i>
+                        <span>Access Your Courses</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Track Your Progress</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <span>Join Student Community</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Form Section -->
+        <section class="login-section">
+            <div class="login-container">
+                <div class="login-card">
+                    <div class="login-header">
+                        <h2>Student Login</h2>
+                        <p>Sign in to your student account</p>
+                    </div>
+
+                    <form class="login-form" id="loginForm" action="process.php" method="post">
+                        <input type="hidden" name="form_type" value="login">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <div class="input-group">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" name="email" placeholder="Enter your email address"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="password" name="password" placeholder="Enter your password"
+                                    required>
+                                <button type="button" class="password-toggle" id="passwordToggle">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="remember" id="remember">
+                                Remember me
+                            </label>
+                            <a href="forgot-password.html" class="forgot-link">Forgot Password?</a>
+                        </div>
+
+                        <button type="submit" class="login-btn-form">
+                            <span class="btn-text">Sign In</span>
+                            <div class="btn-loader" style="display: none;">
+                                <div class="spinner"></div>
+                            </div>
+                        </button>
+
+                        <div class="divider">
+                            <span>or continue with</span>
+                        </div>
+
+                        <div class="social-login">
+                            <button type="button" class="social-btn google-btn">
+                                <i class="fab fa-google"></i>
+                                Google
+                            </button>
+                            <button type="button" class="social-btn facebook-btn">
+                                <i class="fab fa-facebook-f"></i>
+                                Facebook
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="login-footer">
+                        <p>Don't have an account? <a href="signup.html">Create account</a></p>
+                    </div>
+                </div>
+
+                <div class="login-features">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Continue Learning</h3>
+                        <p>Access your course materials, assignments, and progress tracking</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>Expert Support</h3>
+                        <p>Get help from our instructors and connect with fellow students</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Track Progress</h3>
+                        <p>Monitor your learning journey and download certificates</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo Student Accounts -->
+        <section class="demo-section">
+            <div class="all-section">
+                <h2>Demo Student Accounts</h2>
+                <p class="demo-description">Try out our platform with these demo accounts</p>
+
+                <div class="demo-accounts">
+                    <div class="demo-account">
+                        <h4>Student Account</h4>
+                        <div class="account-details">
+                            <p><strong>Email:</strong> student@demo.com</p>
+                            <p><strong>Password:</strong> demo123</p>
+                        </div>
+                        <button class="demo-btn" data-email="student@demo.com" data-password="demo123">
+                            Use This Account
+                        </button>
+                    </div>
+
+                    <div class="demo-account">
+                        <h4>Instructor Account</h4>
+                        <div class="account-details">
+                            <p><strong>Email:</strong> instructor@demo.com</p>
+                            <p><strong>Password:</strong> demo123</p>
+                        </div>
+                        <button class="demo-btn" data-email="instructor@demo.com" data-password="demo123">
+                            Use This Account
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="support-section">
+            <div class="all-section">
+                <h2>Need Help Signing In?</h2>
+                <div class="support-options">
+                    <div class="support-option">
+                        <i class="fas fa-key"></i>
+                        <h4>Reset Password</h4>
+                        <p>Can't remember your password? We'll help you reset it.</p>
+                        <a href="forgot-password.html" class="support-link">Reset Password →</a>
+                    </div>
+
+                    <div class="support-option">
+                        <i class="fas fa-user-plus"></i>
+                        <h4>Create Account</h4>
+                        <p>New to Wazir Coding College? Join our learning community.</p>
+                        <a href="signup.html" class="support-link">Sign Up →</a>
+                    </div>
+
+                    <div class="support-option">
+                        <i class="fas fa-headset"></i>
+                        <h4>Contact Support</h4>
+                        <p>Having technical issues? Our support team is here to help.</p>
+                        <a href="contact.html" class="support-link">Get Help →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foot">
+            <div class="quicklinks">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="enrollment.html">ENROLLMENT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="sign up">SIGN UP</a></li>
+                </ul>
+            </div>
+            <div class="address">
+                <h4>Address:</h4>
+                <p> 📍 Wana south Waziristan </p>
+                <h4>Email:</h4>
+                <p>nizamwazir6560@gmail.com</p>
+                <h4>Contact No:</h4>
+                <p>+92 3025163084</p>
+            </div>
+            <div class="footer-icons">
+                <h4>Follow us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/NizamUdDinWazirK/" target="_blank"><img src="images/facebook.png"
+                            alt="Facebook"></a>
+                    <a href="https://www.youtube.com/@wazircoding786" target="_blank"><img src="images/youtube.png"
+                            alt="YouTube"></a>
+                    <a href="https://www.instagram.com/nizamuddinwazirkk/" target="_blank"><img
+                            src="images/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>&copy; 2025 Wazir Coding College || All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="login.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
