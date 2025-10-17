@@ -24,13 +24,12 @@ body {
     background-color: #f4f4f9;
     color: var(--dark-text);
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-        /* url('sectionbg.png')*/
     ;
 }
 
 /* --- HEADER & BANNER SECTION --- */
 .banner-container {
-    background: linear-gradient(180deg, rgba(13, 27, 42, 0.95), rgba(27, 38, 59, 0.85)), url('/images/big-city.jpg');
+    background: linear-gradient(180deg, rgba(13, 27, 42, 0.95), rgba(27, 38, 59, 0.85)), url('images/big-city.jpg');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -308,7 +307,7 @@ nav {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
     background:
         /* linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9))*/
-        url('/images/section.png');
+        url('images/section.png');
 }
 
 .all-section .para {
@@ -760,4 +759,5 @@ textarea:focus {
     .auth-buttons {
         display: none !important;
     }
+
 }
